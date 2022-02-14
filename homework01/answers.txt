@@ -1,0 +1,29 @@
+@author David Yoo (gy24)
+@date 02/03/2022
+
+1. How many memory locations (units of RAM) does the virtual machine have by default?
+- 1024
+
+2. What are the registers that the virtual machine has?
+- reg0, reg1, reg2, pc
+
+3. What arguments does the instruction JLZ take and what does the instruction do?
+- Check if the certain register is less than 0, if it's less than 0 then change the 'pc' register to the destination register
+
+4. When does the CPU check if an interrupt has occurred?
+- At the end of each instruction, before the next instruction
+
+5. What does the Monitor instruction S do?
+- show memory from start to end
+
+6. What does the Monitor instruction ! do?
+- Toggle debugging on or off
+
+7. Can assembly language files contain comments? How about blank lines?
+- Yes it can both contain comments and blank lines. But when load a program into memory, then it will skip empty lines and comments.
+
+8. What function is called to write bytes into memory?
+- _write_program()
+
+9. Do assembly language programs assume they are loaded into memory at certain locations?
+- Yes, because they have the starting location when they are loaded into memory.
