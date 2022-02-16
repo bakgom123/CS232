@@ -1,0 +1,28 @@
+ctx_switching Part Ein
+Author: David Yoo (gy24)
+Date: Feb/16/2022
+
+1. Where is the PCB class defined?
+- calos.py
+
+2. What information does a PCB object contain?
+-  name, pid, values of registers, quatum
+
+3. When is a PCB created? Which line in which file creates a PCB?
+- line 180 in main.py
+
+4. What process states have been defined?
+- NEW, READY, RUNNING, WAITING, DONE
+
+5. Regarding the variable current_proc: Where has it been defined and what is its significance?
+- line 7 in calos.py. It has the address of the current process's PCB.
+
+6. In the TimerController class, what does code that reads
+ 	with self._mutex:
+ 	    code here... 		
+do? I.e., what does with mean in python and why does the code use it? 
+- From the comments, we can know that mutex lock to protect setting/getting the countdown. And the code below the 
+  self._mutex coppies the value to the countdown, and run the timer within that value.
+
+7. In the TimerController class, explain what the code does when the countdown goes to 0 (i.e., the time expires).
+- The timer expires, and it stops generating the interrupts.
